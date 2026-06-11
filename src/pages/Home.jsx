@@ -10,7 +10,10 @@ function Home() {
     { id: 3, title: "Oppenheimer", release_date: "2025" },
   ];
 
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault()
+    
+  };
 
   return (
     <div className="home">
