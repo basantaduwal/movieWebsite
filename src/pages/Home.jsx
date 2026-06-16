@@ -1,28 +1,29 @@
 import MovieCard from "../components/movieCard";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { getPopularMovies, searchMovies } from "../services/api";
-import { getPopularMovies } from "../services/api";
 import "../css/Home.css";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadPopularMovies = async () => {
       try {
-        const getPopularMovies = await getPopularMovies();
-        setMovies(getPopularMovies);
+        const popularMovies = await getPopularMovies();
+        setMovies(popularMovies);
       } catch (err) {
-        console.log(err)
-        setError("Failed to load movies...")
+        console.log(err);
+        setError("Failed to load movies...");
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     };
+
+    loadPopularMovies();
   }, []);
 
   const handleSearch = (e) => {
