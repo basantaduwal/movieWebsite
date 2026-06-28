@@ -1,16 +1,50 @@
-# React + Vite
+# Movie Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Vite movie browsing app that lets users explore popular movies, search for titles, and save favorites locally.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse a list of popular movies on the home page
+- Search movies by title
+- Add or remove movies from favorites
+- Favorites are stored in browser local storage
+- Navigation between Home and Favorites pages
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- TMDB API for movie data
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- src/pages: main pages such as Home and Favorites
+- src/components: reusable UI components like MovieCard
+- src/contexts: global state for favorites
+- src/services: API calls to TMDB
+- src/css: styling for the app
+
+## Getting Started
+
+1. Install dependencies
+   ```bash
+   npm install
+   ```
+2. Start the development server
+   ```bash
+   npm run dev
+   ```
+3. Open the local Vite URL shown in the terminal
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Notes
+
+The app uses The Movie Database (TMDB) API to load movie data. A valid API key is already configured in the service layer for local development.
