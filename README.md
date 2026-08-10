@@ -45,6 +45,12 @@ To create a production build:
 npm run build
 ```
 
+## Deployment
+
+The project is deployed at:
+
+https://movflix404.vercel.app/
+
 ## Notes
 
 The app uses The Movie Database (TMDB) API to load movie data. A valid API key is already configured in the service layer for local development.
