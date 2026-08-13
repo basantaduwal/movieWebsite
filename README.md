@@ -1,4 +1,4 @@
-# Movie Website
+# MovFlix
 
 A simple React + Vite movie browsing app that lets users explore popular movies, search for titles, and save favorites locally.
 
