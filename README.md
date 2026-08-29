@@ -1,4 +1,4 @@
-# Movie Website
+# MovFlix
 
 A simple React + Vite movie browsing app that lets users explore popular movies, search for titles, and save favorites locally.
 
@@ -44,6 +44,12 @@ To create a production build:
 ```bash
 npm run build
 ```
+
+## Deployment
+
+The project is deployed at:
+
+https://movflix404.vercel.app/
 
 ## Notes
 
